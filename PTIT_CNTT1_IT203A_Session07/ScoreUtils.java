@@ -6,9 +6,9 @@ public class ScoreUtils {
     public static Scanner sc = new Scanner(System.in);
     public static void checkPass(double score){
         if (score >= 5) {
-            System.out.println("Đạt");
+            System.out.println(score + ": " + "Đạt");
         }else {
-            System.out.println("Trượt");
+            System.out.println(score + ": " + "Trượt");
         }
     }
 
@@ -19,6 +19,6 @@ public class ScoreUtils {
             total+= score;
             quantity++;
         }
-        System.out.printf("Điểm trung bình: %.2f", (total/quantity));
+        System.out.printf("\nĐiểm trung bình: %.2f", (total/quantity));
     }
 }
