@@ -1,0 +1,14 @@
+package PTIT_CNTT1_IT203A_Session10.Baitap2;
+
+public class BaiTap2_Main {
+    public static void main(String[] args) {
+        Vehicle car = new Car("Volvo");
+        Vehicle bicycle = new Bicycle("Thong Nhat");
+
+        System.out.print(car.brand + " - Cách di chuyển: ");
+        car.move();
+
+        System.out.print(bicycle.brand + " - Cách di chuyển: ");
+        bicycle.move();
+    }
+}
