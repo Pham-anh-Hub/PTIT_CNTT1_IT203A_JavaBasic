@@ -1,9 +1,14 @@
 package PTIT_CNTT1_IT203A_Session10.BTTH;
 
-public class Employee implements IEmployee{
+import java.util.Scanner;
+
+public abstract class Employee implements IEmployee{
     private String id;
     private String name;
     private int age;
+
+    public Scanner sc = new Scanner(System.in);
+
 
     public Employee() {
     }
@@ -38,18 +43,24 @@ public class Employee implements IEmployee{
         this.age = age;
     }
 
+
     @Override
     public void input() {
+        System.out.print("Nhập mã nhân viên: ");
+        setId(sc.nextLine());
+        System.out.print("Nhập tên nhân viên: ");
+        setName(sc.nextLine());
+        System.out.print("Nhập tuổi nhân viên: ");
+        setAge(sc.nextInt());
 
     }
 
     @Override
     public void display() {
-
+        System.out.println("Mã nhân viên: " + getId());
+        System.out.println("Tên nhân viên: " + getName());
+        System.out.println("Tuổi nhân viên: " + getAge());
     }
 
-    @Override
-    public double getSalary() {
-        return 0;
-    }
+    public abstract double getSalary();
 }
