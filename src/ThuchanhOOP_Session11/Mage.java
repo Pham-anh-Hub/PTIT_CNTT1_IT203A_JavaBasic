@@ -17,12 +17,12 @@ public class Mage extends GameCharactor{
         if (mana >= 5) {
             mana -= 5;
             target.takeDamage(attackPower);
-            System.out.println("Tốn 5 mana. Mana còn lại: " + mana);
         } else {
             int reducedDamage = attackPower / 2;
             target.takeDamage(reducedDamage);
-            System.out.println("Hết mana! Gây sát thương yếu: " + reducedDamage);
+//            System.out.println("Hết mana! Gây sát thương yếu: " + reducedDamage);
         }
+//        target.displayInfo();
     }
 
     // Chiêu cuối
@@ -36,7 +36,6 @@ public class Mage extends GameCharactor{
             System.out.println(name + " tung Hỏa Cầu!");
             target.takeDamage(damage);
 
-            System.out.println(name + " tốn 50 mana. Mana còn lại: " + mana);
         } else {
             System.out.println("Không đủ mana để dùng Hỏa Cầu!");
         }
@@ -46,6 +45,6 @@ public class Mage extends GameCharactor{
     @Override
     void displayInfo() {
         super.displayInfo();
-        System.out.println("Mana: " + this.mana);
+        System.out.print(" | Mana: " + this.mana + "\n");
     }
 }

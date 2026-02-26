@@ -47,16 +47,15 @@ public abstract class GameCharactor  {
             return;
         }
         hp -= amount;
-        System.out.println(name + " bị tấn công");
+//        System.out.println(name + " bị tấn công");
+        this.displayInfo();
     }
 
     // Chiêu cuối
     public abstract void useUltimate(GameCharactor target);
 
     void displayInfo(){
-        System.out.println("Tên nhân vật: " + this.name);
-        System.out.println("Máu hiện tại: " + this.hp);
-        System.out.println("Lực tấn công: " + this.attackPower);
+        System.out.print(this.name + " | máu: " + this.hp + " | năng lượng: " + this.attackPower);
     }
 
 }

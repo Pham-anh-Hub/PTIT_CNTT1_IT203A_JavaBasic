@@ -27,7 +27,7 @@ public class Warrior extends GameCharactor implements ISkill{
         int selfDamage = hp * 10 / 100;
         this.hp -= selfDamage;
 
-        System.out.println(name + " bị mất " + selfDamage + " máu do gắng sức!");
+//        System.out.println(name + " bị mất " + selfDamage + " máu do gắng sức!");
     }
 
 
@@ -37,10 +37,14 @@ public class Warrior extends GameCharactor implements ISkill{
         int realDamage = amount - armor;
         if (realDamage < 0) realDamage = 0;
 
-        System.out.println(name + " giảm " + armor + " sát thương nhờ giáp.");
-
+        System.out.println(name + " - " + armor + " sát thương nhờ giáp.");
         super.takeDamage(realDamage);
     }
 
 
+    @Override
+    void displayInfo() {
+        super.displayInfo();
+        System.out.print(" | Giáp: " + this.armor + "\n");
+    }
 }
