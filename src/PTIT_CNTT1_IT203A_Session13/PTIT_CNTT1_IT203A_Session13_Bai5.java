@@ -133,8 +133,8 @@ public class PTIT_CNTT1_IT203A_Session13_Bai5 {
             return;
         }
 
-        for (Patient p : patientList) {
-            System.out.println(p);
-        }
+            for (Patient p : patientList) {
+                System.out.println(p);
+            }
     }
 }
