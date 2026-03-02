@@ -10,7 +10,7 @@ public class PTIT_CNTT1_IT203A_Session14_Bai1 {
         Set<String> patients = new HashSet<>();
 
 
-        System.out.println("Nhập vào thông tin bệnh nhân(x để dừng): ");
+        System.out.println("Nhập vào thông tin bệnh nhân(x để dừng): VD: Nguyễn Văn A – Yên Bái ");
         while (true){
             String input = sc.nextLine();
             if (input.equals("x")){

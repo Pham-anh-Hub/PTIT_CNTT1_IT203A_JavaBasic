@@ -3,12 +3,12 @@ package PTIT_CNTT1_IT203A_Session14;
 public class PatientTreatment {
     String name;
     int age;
-    String major;
+    String department;
 
-    public PatientTreatment(String name, int age, String major) {
+    public PatientTreatment(String name, int age, String department) {
         this.name = name;
         this.age = age;
-        this.major = major;
+        this.department = department;
     }
 
     @Override

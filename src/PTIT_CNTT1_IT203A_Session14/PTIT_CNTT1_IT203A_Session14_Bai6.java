@@ -7,14 +7,12 @@ public class PTIT_CNTT1_IT203A_Session14_Bai6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-
-
         System.out.println("Nhập thông tin bệnh nhân (x hoặc 0 để thoát): ");
         while(true){
 
             System.out.print("Khoa điều trị: ");
-            String major = sc.nextLine().trim().toUpperCase();
-            if(major.equalsIgnoreCase("x")){
+            String department = sc.nextLine().trim().toUpperCase();
+            if(department.equalsIgnoreCase("x")){
                 break;
             }
             System.out.print("Tên bệnh nhân: ");
@@ -30,12 +28,12 @@ public class PTIT_CNTT1_IT203A_Session14_Bai6 {
             sc.nextLine();
             System.out.println("-----------------------------------\n");
 
-            PatientTreatment newPatient = new PatientTreatment(fullname, age, major);
+            PatientTreatment newPatient = new PatientTreatment(fullname, age, department);
 
-            if (!patientTreatment.containsKey(major)) {
-                patientTreatment.put(major, new ArrayList<>());
+            if (!patientTreatment.containsKey(department)) {
+                patientTreatment.put(department, new ArrayList<>());
             }
-            patientTreatment.get(major).add(newPatient);
+            patientTreatment.get(department).add(newPatient);
 
         }
         displayPatients();
